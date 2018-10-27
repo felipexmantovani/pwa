@@ -17,7 +17,8 @@ body {
 	position: fixed;
 	box-sizing: border-box;
 	padding: 20% 0%;
-	text-align: center;
+    text-align: center;
+    z-index: 999;
 }
 
 .img {
