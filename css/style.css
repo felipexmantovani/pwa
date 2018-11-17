@@ -17,8 +17,8 @@ body {
 	position: fixed;
 	box-sizing: border-box;
 	padding: 20% 0%;
-    text-align: center;
-    z-index: 999;
+	text-align: center;
+	z-index: 100;
 }
 
 .img {
@@ -57,6 +57,6 @@ body {
 	font-weight: bold;
 }
 
-#nav-footer li a {
+#nav-footer li a, #footer a {
 	color: #fff;
 }

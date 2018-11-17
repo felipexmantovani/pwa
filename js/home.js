@@ -1,19 +1,20 @@
-$(document).ready( function() {
+$(document).ready(function(){
+	//produtos do cache
+	produtos = localStorage.getItem("produtos");
 
-    var produtos = localStorage.getItem('produtos');
+	$.getJSON("json/produto.php", function(){
+		$(".produto").html("<img src='imagens/load.gif'> Carregando produtos");
+	}).done(function(dados){
+		console.log("Carregando produtos do JSON");
+		//jogar os dados no .produto
+		preencherProdutos(dados);
+		cache = JSON.stringify(dados);
+		localStorage.setItem("produtos",dados);
+	}).fail(function(){
+		console.log("Carregando produtos do Cache");
+		dados = JSON.parse(produtos);
+		preencherProdutos(dados);
+	})
 
-    $.getJSON('json/produto.php', function() {
-        $('#msg').html('Carregando produtos...');
-    })
-    .done( function(dados) {
-        getProdutos(dados);
-        dados = JSON.stringify(dados);
-        localStorage.setItem('produtos', dados);
-        $('#msg').html('');
-    })
-    .fail( function() {
-        dados = JSON.parse(produtos);
-        getProdutos(dados);
-    });
-
-});
+	
+})
