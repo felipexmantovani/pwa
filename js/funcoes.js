@@ -1,9 +1,12 @@
 $(document).ready(function(){
+
+	//mascara de carregamento
 	$(".load").fadeOut("slow", function(){
 		$(".load").hide();
-    })
+	})
 
-    $('.sidenav').sidenav();
+	//acionar o menu responsivo
+	$(".sidenav").sidenav();
 
 	dadosCategoria = localStorage.getItem("categorias");
 
@@ -19,7 +22,7 @@ $(document).ready(function(){
 		//importar as categorias do JSON
 		$.getJSON("json/categoria.php", function(){
 			$("#msg").html("<p><img src='imagens/load.gif'> Carregando categorias...</p>");
-		}).done(function(dados){
+		}).done(function(dados){			
 			//se deu certo, devolve os dados
 
 			//tranformar o json em string
@@ -47,11 +50,12 @@ $(document).ready(function(){
 
 
 //funcao paga pegar o id
-function retornaId() {
+function retornaId(pos) {
 	pagina = window.location.href;
-	console.log("Página: "+pagina);
+	//console.log("Página: "+pagina);
 	p = pagina.split("/");
-	return p[5];
+	console.log("Posição: " + p[pos] );
+	return p[pos];
 }
 
 //funcao para preencher os produtos

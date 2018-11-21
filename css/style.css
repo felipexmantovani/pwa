@@ -10,7 +10,7 @@ body {
 	background: #f1f1f1;
 }
 
-.load {
+.load, #app {
 	background: #fff;
 	width: 100%;
 	height: 100%;
@@ -19,6 +19,10 @@ body {
 	padding: 20% 0%;
 	text-align: center;
 	z-index: 100;
+}
+
+#app {
+	display: none;
 }
 
 .img {
@@ -57,6 +61,7 @@ body {
 	font-weight: bold;
 }
 
-#nav-footer li a, #footer a {
+#nav-footer li a {
 	color: #fff;
-}
+
+

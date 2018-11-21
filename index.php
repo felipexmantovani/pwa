@@ -19,17 +19,30 @@
 	<link rel="stylesheet" type="text/css" href="css/materialize.min.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="manifest" href="manifest.json">
 
 	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="js/materialize.min.js"></script>
 	<script type="text/javascript" src="js/funcoes.js"></script>
-	<script type="text/javascript" 
-	src="js/<?=$arquivo;?>"></script>
+	<script type="text/javascript" src="js/<?=$arquivo;?>"></script>
 </head>
 <body>
    <div class="load">
    	<img src="imagens/load.gif">
    </div>
+
+   <?php
+   if ( $pagina == "home" ) {
+
+	   	// echo "<div id='app'>
+	   	// <a href='javascript:;' id='addBtn' class='btn red darken-4'>Adicionar o App a Tela Inicial</a>
+	   	// <a href='javascript:fechar()' class='btn red darken-3'>Agora não</a>
+	   	// </div>";
+
+        echo '<button class="add-button btn red darken-4">Adicionar a Página Inicial<button>';
+
+   }
+   ?>
 
    <nav>
     <div class="nav-wrapper">
@@ -49,6 +62,11 @@
     </div>
   </nav>
   <ul class="sidenav" id="mobile-demo">
+  	<li>
+    	<a href="carrinho" class="btn red darken-4">
+    		<i class="material-icons">shopping_cart</i>
+    	</a>
+    </li>
   </ul>
 
   <main class="container">
@@ -69,7 +87,7 @@
 			  <div class="col l4 offset-l2 s12">
 			    <h5 class="white-text">Links</h5>
 			    <ul id="footer">
-			      
+
 			    </ul>
 			  </div>
 			</div>
