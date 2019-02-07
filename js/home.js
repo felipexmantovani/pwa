@@ -17,6 +17,11 @@ $(document).ready(function() {
             dados = JSON.parse(produtos);
             preencherProdutos(dados);
         });
+
+    $('.cancelar-button').on('click', function() {
+        console.log('cancelar');
+        $('.overlay').fadeOut();
+    })
 });
 
 function fechar() {
@@ -36,6 +41,7 @@ if ("serviceWorker" in navigator) {
 
 let deferredPrompt;
 const addBtn = document.querySelector(".add-button");
+
 window.addEventListener("beforeinstallprompt", e => {
     // Prevent Chrome 67 and earlier from automatically showing the prompt
     e.preventDefault();

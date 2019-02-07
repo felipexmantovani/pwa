@@ -22,7 +22,7 @@ $(document).ready(function(){
 		//importar as categorias do JSON
 		$.getJSON("json/categoria.php", function(){
 			$("#msg").html("<p><img src='imagens/load.gif'> Carregando categorias...</p>");
-		}).done(function(dados){			
+		}).done(function(dados){
 			//se deu certo, devolve os dados
 
 			//tranformar o json em string
@@ -51,9 +51,13 @@ $(document).ready(function(){
 
 //funcao paga pegar o id
 function retornaId(pos) {
+    console.log(pos)
 	pagina = window.location.href;
 	//console.log("Página: "+pagina);
-	p = pagina.split("/");
+    p = pagina.split("/");
+    console.log('-----')
+    console.log(p)
+    console.log('-----')
 	console.log("Posição: " + p[pos] );
 	return p[pos];
 }

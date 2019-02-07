@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-	id = retornaId(5);
+	id = retornaId(6);
 
 	produtos = localStorage.getItem("categoria"+id);
 

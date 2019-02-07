@@ -2,12 +2,12 @@ $(document).ready(function(){
 
 
 	//recuperar a opcao
-	op = retornaId(6);
+	op = retornaId(7);
 	if ( op == "add" ) {
 
 		console.log("Adicionando produto ao carrinho");
 		//recuperar o id
-		id = retornaId(5);
+		id = retornaId(6);
 
 		produto = JSON.parse( localStorage.getItem("produto"+id) );
 
@@ -25,12 +25,12 @@ $(document).ready(function(){
 		}
 
 		//carrinho
-		
+
 		carrinho = JSON.parse ( localStorage.getItem("carrinho"));
 		if ( !carrinho ) {
 			//iniciar carrinho
 			carrinho = [];
-		} 
+		}
 
 		$.each(produto, function( key, val ) {
 			//verificar se já existe este item no carrinho

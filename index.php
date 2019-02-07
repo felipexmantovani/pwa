@@ -14,7 +14,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 
-	<base href="http://localhost/sub/">
+	<base href="http://felipemantovani.com.br/pos/sub/">
 
 	<link rel="stylesheet" type="text/css" href="css/materialize.min.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
@@ -39,7 +39,12 @@
 	   	// <a href='javascript:fechar()' class='btn red darken-3'>Agora não</a>
 	   	// </div>";
 
-        echo '<button class="add-button btn red darken-4">Adicionar a Página Inicial<button>';
+        echo '
+            <div class="overlay">
+            <button class="add-button btn red darken-4">Adicionar a Página Inicial</button>
+            <button class="cancelar-button btn btn-small red darken-4">Cancelar</button>
+            </div>'
+            ;
 
    }
    ?>
